@@ -9,7 +9,7 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-@Table(schema = "tb_patient")
+@Table(name = "tb_patient")
 @Entity
 public class PatientEntity {
 
