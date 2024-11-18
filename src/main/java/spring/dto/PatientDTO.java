@@ -1,13 +1,8 @@
 package spring.dto;
 
 import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
-
-//@Getter
-//@Setter
 @Builder
-public record PatientResponseDTO(
+public record PatientDTO(
         String id,
         String name,
         String telefone,
