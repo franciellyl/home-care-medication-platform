@@ -13,7 +13,6 @@ import lombok.*;
 @Entity
 public class PatientEntity {
 
-
     @Column(name = "id")
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -28,7 +27,8 @@ public class PatientEntity {
     @Column(name = "endereco")
     private String endereco;
 
-    @Column(name = "medication")
-    private Long medication; //@TODO acrescentar relacionamento e criar classe medication
+    @ManyToOne
+    @JoinColumn(name = "id_medication")
+    private MedicationEntity medication;
 
 }
