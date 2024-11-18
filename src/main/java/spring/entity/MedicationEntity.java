@@ -17,7 +17,7 @@ import java.util.Date;
 public class MedicationEntity {
 
     @Id
-    @Column(name = "id")
+    @Column(name = "id_medication")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
 
