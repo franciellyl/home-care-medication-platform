@@ -5,6 +5,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import spring.dto.MedicationDTO;
+import spring.dto.PatientDTO;
 import spring.entity.MedicationEntity;
 import spring.entity.PatientEntity;
 import spring.service.MedicationService;
@@ -22,12 +24,12 @@ public class HomeCareController {
     private MedicationService medicationService;
 
     @GetMapping("/patients")
-    public ResponseEntity<List<PatientEntity>> getPatient(){
+    public ResponseEntity<List<PatientDTO>> getPatient(){
         return ResponseEntity.ok(patientService.getAllPatient());
     }
 
     @GetMapping("/medications")
-    public ResponseEntity<List<MedicationEntity>> getMedications(){
+    public ResponseEntity<List<MedicationDTO>> getMedications(){
         return ResponseEntity.ok(medicationService.getAllMedications());
     }
 }

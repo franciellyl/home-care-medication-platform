@@ -8,5 +8,5 @@ import java.util.List;
 
 @Service
 public interface MedicationService {
-    List<MedicationEntity> getAllMedications();
+    List<MedicationDTO> getAllMedications();
 }
