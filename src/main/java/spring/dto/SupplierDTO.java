@@ -1,12 +1,12 @@
 package spring.dto;
 
 import lombok.Builder;
-@Builder
-public record PatientDTO(
-        String name,
-        String telefone,
-        String endereco,
-        MedicationDTO medication
 
+@Builder
+public record SupplierDTO(
+        String name,
+        String documentNumber,
+        String telefone,
+        Boolean isActive
 ) {
 }
